@@ -1,0 +1,40 @@
+Maven: Maven is a build tool used to craete package of our source code and we deploy in app server.It is an open source java build tool.
+using java we build 3 types of apps:1)stanadlone (jar --javaarchive}->it contains all java classes
+2)webapps(war--web archive)->java code+webcontent(html,css)
+3)enterprise apps(ear-->enterprise)->3 web modules->3 war files java+webcontent.
+to download software (https://maven.apache.org/download.cgi)
+
+ex: maven->pom.xml
+start with project and end with project
+<project xmlns="http://maven.apache.org/POM/4.0.0"   
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0   
+http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+  
+  <modelVersion>4.0.0</modelVersion>  
+  <groupId>com.javatpoint.application1</groupId> -?com.companyname 
+  <artifactId>my-app</artifactId> -->projectname 
+  <version>1</version>  
+  
+</project>
+maven uses three repositories:
+1)maven local repository---->/.m2/repository
+2)maven central repo
+3)remote repo
+
+to change default config files to customized we need to open settings.xml
+3 life cycles
+lifecycle                           goal
+clean                                clean: it will delete previous build
+site                                 site: it will generate doc for java files
+swagger                              
+default                             validate:valiadte project structure and resource files
+                                    compile: it will compile source code and junit test case
+                                     test: it will run the test cases
+                                     package: it will create a package(jar/var/ear)
+                                     install:it wioll store the build artifact into maven local repo
+
+mvn test: command to run junit test cases
+mvn package
+mvn clean package
+                                     deploy: it will store build artifact into remote repo
